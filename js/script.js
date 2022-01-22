@@ -6,7 +6,6 @@ const burgerItems = document.querySelector(".burger__items");
 var listener = function (e) {
     e.stopPropagation();
     let target = e.target;
-    console.log(target);
     if (target.classList.contains("burger__items") === false && target.classList.contains("burger__button") === false) {
         burgerItems.classList.remove("visible");
         burgerItems.classList.add("hidden");

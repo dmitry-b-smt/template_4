@@ -138,7 +138,7 @@ body {
 .burger {
       &__button {
             position: relative;
-            z-index: 3;
+            z-index: 4;
             cursor: pointer;
             width: 39px;
             height: 39px;
@@ -168,7 +168,7 @@ body {
 
       &__items {
             position: absolute;
-            z-index: 1;
+            z-index: 3;
             top: 73px;
             left: 0;
             width: 100%;
@@ -191,7 +191,7 @@ body {
 
       &__list {
             position: relative;
-            z-index: 2;
+            z-index: 4;
             display: block;
             text-align: center;
             margin: 30px;
@@ -241,6 +241,86 @@ body {
 .main {
       flex: 1 1 auto;
 }
+.manage {
+      position: relative;
+
+      &__background {
+            position: relative;
+            z-index: 1;
+            height: 100vh;
+      }
+      @media (min-width: 1370px) {
+            &__background {
+                  height: 895px;
+            }
+      }
+      &__background img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+      }
+      @media (min-width: 1370px) {
+            &__background img {
+                  object-position: 24% 0%;
+            }
+      }
+
+      &__row {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+      }
+
+      &__container {
+            display: flex;
+            justify-content: flex-start;
+            height: 100%;
+      }
+
+      &__column {
+            flex: 1 1 auto;
+            max-width: 420px;
+            padding: 13% 5px 0 5px;
+      }
+      @media (min-width: 1370px) {
+            &__column {
+                  padding: 13% 0 0 0;
+            }
+      }
+
+      &__title {
+            font-family: "Georgia", sans-serif;
+            font-weight: 700;
+            font-size: 65px;
+            line-height: 113.6%;
+            margin: 0px 0px 30px 0px;
+            color: #01996d;
+      }
+
+      &__text {
+            font-family: "Late-Regular", sans-serif;
+            font-weight: 400;
+            line-height: 155%;
+            margin: 0px 0px 60px 0px;
+            color: #000000;
+            text-shadow: 0px 0px 2px #ffffff;
+      }
+      @media (min-width: 1370px) {
+            &__text {
+                  color: #484848;
+            }
+      }
+      &__button {
+            display: inline-block;
+      }
+}
+
 // -------------------FOOTER-------------------------
 // -------------------ADDITIONAL---------------------
 .unactive {
