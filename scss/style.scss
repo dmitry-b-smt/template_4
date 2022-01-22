@@ -106,7 +106,7 @@ body {
             align-items: center;
             justify-content: space-between;
       }
-      @media (min-width: 540px) {
+      @media (min-width: 1024px) {
             &__login {
                   display: flex;
             }
@@ -155,6 +155,11 @@ body {
             box-shadow: 0px 0px 5px 7px rgba(1, 153, 109, 0.25);
             border-radius: 4px;
       }
+      &__button-active {
+            background-color: rgba(1, 153, 109, 0.25);
+            box-shadow: 0px 0px 5px 7px rgba(1, 153, 109, 0.25);
+            border-radius: 4px;
+      }
       &__button p {
             display: block;
             border-bottom: 3px solid #000000;
@@ -164,7 +169,7 @@ body {
       &__items {
             position: absolute;
             z-index: 1;
-            top: 0;
+            top: 73px;
             left: 0;
             width: 100%;
             min-height: 50vh;
@@ -174,7 +179,7 @@ body {
             justify-content: space-between;
             background-color: rgba(255, 255, 255, 1);
             box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 1);
-            padding: 5%;
+            padding: 0% 5% 5% 5%;
             opacity: 0;
             pointer-events: none;
             overflow: hidden;
@@ -188,6 +193,8 @@ body {
             position: relative;
             z-index: 2;
             display: block;
+            text-align: center;
+            margin: 30px;
       }
 
       &__list li {
@@ -198,12 +205,17 @@ body {
             position: relative;
             z-index: 2;
             display: flex;
+            flex-direction: column;
             align-items: center;
+            text-align: center;
       }
-      @media (min-width: 540px) {
+      @media (min-width: 1024px) {
             &__login {
                   display: none;
             }
+      }
+      &__login .login__link {
+            margin: 0px 0px 10px 0px;
       }
 
       &__button-close {
@@ -251,5 +263,24 @@ body {
       100% {
             opacity: 1;
             min-height: 50vh;
+      }
+}
+
+.hidden {
+      opacity: 0;
+      pointer-events: auto;
+      animation-name: dropup;
+      animation-duration: 0.5s;
+      animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@keyframes dropup {
+      0% {
+            opacity: 1;
+            min-height: 50vh;
+      }
+
+      100% {
+            opacity: 0;
+            min-height: 0vh;
       }
 }
