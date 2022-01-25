@@ -220,16 +220,26 @@ body {
             overflow: hidden;
       }
 
+      &__items li:not(:last-child) {
+            margin: 0 0 15px 0;
+      }
+
       &__item {
             text-transform: capitalize;
+      }
+      &__item:hover {
+            text-decoration: underline;
       }
 
       &__list {
             position: relative;
             z-index: 2;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             text-align: center;
             margin: 30px;
+            flex: 1 1 auto;
       }
 
       &__list li {
@@ -841,6 +851,102 @@ body {
 }
 
 // -------------------FOOTER-------------------------
+.footer {
+      background-color: #245852;
+
+      &__row {
+            padding: 30px 5px 25px 5px;
+            display: flex;
+            justify-content: center;
+      }
+
+      @media (min-width: 760px) {
+            &__row {
+                  justify-content: flex-start;
+            }
+      }
+      @media (min-width: 1060px) {
+            &__row {
+                  padding: 40px 5px 50px 5px;
+            }
+      }
+      @media (min-width: 1370px) {
+            &__row {
+                  padding: 95px 0 144px 0;
+            }
+      }
+
+      &__column {
+      }
+
+      &__item {
+      }
+
+      &__logo {
+            display: block;
+            color: #ffffff;
+            font-family: "Avenir-Black", sans-serif;
+            font-weight: 900;
+            font-size: 30px;
+            line-height: 137.5%;
+            margin: 0 0 30px 0;
+      }
+      @media (min-width: 1060px) {
+            &__logo {
+                  font-size: 35px;
+                  margin: 0 0 45px 0;
+            }
+      }
+      @media (min-width: 1060px) {
+            &__logo {
+                  font-size: 40px;
+                  margin: 0 0 60px 0;
+            }
+      }
+
+      &__menu {
+      }
+
+      &__list {
+      }
+
+      &__menu-item:not(:last-child) {
+            margin: 0 0 30px 0;
+      }
+      @media (min-width: 1060px) {
+            &__menu-item:not(:last-child) {
+                  margin: 0 0 45px 0;
+            }
+      }
+      @media (min-width: 1060px) {
+            &__menu-item:not(:last-child) {
+                  margin: 0 0 60px 0;
+            }
+      }
+
+      &__menu-link {
+            font-family: "Lato-Regular", sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 120%;
+            color: #ffffff;
+            text-transform: capitalize;
+      }
+      @media (min-width: 1060px) {
+            &__menu-link {
+                  font-size: 22px;
+            }
+      }
+      @media (min-width: 1060px) {
+            &__menu-link {
+                  font-size: 25px;
+            }
+      }
+      &__menu-link:hover {
+            text-decoration: underline;
+      }
+}
+
 // -------------------ADDITIONAL---------------------
 
 .appear {
